@@ -233,16 +233,16 @@ async def start(client, message):
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,  
             )
-            filetype = msg.media
-            file = getattr(msg, filetype.value)
-            title = '@VJ_Botz  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
-            size=get_size(file.file_size)
-            f_caption = f"<code>{title}</code>"
-            if CUSTOM_FILE_CAPTION:
-                try:
-                    f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
-                except:
-                    return
+            # filetype = msg.media
+            #file = getattr(msg, filetype.value)
+            #title = '@VJ_Botz  ' + ' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), file.file_name.split()))
+            #size=get_size(file.file_size)
+            #f_caption = f"<code>{title}</code>"
+            #if CUSTOM_FILE_CAPTION:
+             #   try:
+              #      f_caption=CUSTOM_FILE_CAPTION.format(file_name= '' if title is None else title, file_size='' if size is None else size, file_caption='')
+               # except:
+                #    return
             
             await msg.edit_caption(f_caption)
             if STREAM_MODE == True:
@@ -268,9 +268,9 @@ async def start(client, message):
                 await g.delete()
                 await k.edit_text("<b>Your File/Video is successfully deleted!!!</b>")
             return
-        except:
-            pass
-        return await message.reply('0')
+       # except:
+        #    pass
+       # return await message.reply('0')
 
 # Don't Remove Credit Tg - @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
