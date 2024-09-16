@@ -141,7 +141,7 @@ async def start(client, message):
            #         f_caption=f_caption
           #  if f_caption is None:
          #       f_caption = f"{title}"
-          #  try:
+            try:
                 if STREAM_MODE == True:
                     # Create the inline keyboard button with callback_data
                     user_id = message.from_user.id
